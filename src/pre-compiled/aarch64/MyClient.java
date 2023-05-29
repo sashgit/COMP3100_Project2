@@ -39,8 +39,6 @@ public class MyClient {
             // Send "AUTH" to server to identify user
             output.write(("AUTH\n").getBytes());
             output.flush();
-
-
             serverResponse = input.readLine(); // Receive OK
 
 
@@ -63,9 +61,7 @@ public class MyClient {
 
             String[] serverList = serverResponse.split(" ");
 
-
             int serverNums = Integer.parseInt(serverList[1]);
-
 
             output.write(("GETS Avail " + jobCores + " " + jobMemory + " " + jobDisk + "\n").getBytes());
             output.flush();
