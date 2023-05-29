@@ -27,6 +27,7 @@ public class MyClient {
 
             // Send the HELO message and the auth message
             Send(output, "HELO"); // Send HELO
+            System.out.println("checkpoint      1");
 
             // Send "AUTH" to server to identify user
             Send(output, "AUTH");
