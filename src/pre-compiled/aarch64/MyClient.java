@@ -118,18 +118,17 @@ public class MyClient {
             System.out.println(exception);
         }
     }
+    
+    // Helper function to send a message
     public static String Send(DataOutputStream output, String s) throws IOException{
         output.write(("" + s + "\n").getBytes());
         output.flush();
         return s;
     }
 
+    // Helper function to receive a message
     public static String Receive(BufferedReader input) throws IOException{
         String mess = input.readLine(); 
         return mess; 
     }
-
-
-
-
 }
