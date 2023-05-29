@@ -1,4 +1,5 @@
 import java.net.*;
+import java.nio.Buffer;
 import java.io.*;
 
 
@@ -154,6 +155,17 @@ public class MyClient {
         } catch (Exception exception) {
             System.out.println(exception);
         }
+    }
+
+    public static String Send(DataOutputStream output, String s) throws IOException{
+        output.write(("" + s + "\n").getBytes());
+        output.flush();
+        return s;
+    }
+
+    public static String Recieve(BufferedReader input) throws IOException{
+        String mess = input.readLine(); 
+        return mess; 
     }
 }
 
