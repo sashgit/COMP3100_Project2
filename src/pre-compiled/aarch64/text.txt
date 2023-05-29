@@ -1,0 +1,48 @@
+SOME OF THE PROS AND CONS OF THE THREE BASELINE ALGORITHMS: 
+
+
+First-Fit (FF)
+Description: In this algorithm jobs are scheduled by scanning servers from the begniing of the server list to the end. 
+
+Pros: 
+- As servers are being scanned from the beginning this means the inital ones will be found quicker if that is the case. 
+- Time complexity is better is jobs are scheduled at the beginning meaning less latency
+- Only searches the first block which makes it the most effieicnt,.
+
+Cons: 
+- May have issues when it comes to allowing processes to take space even if it was possible to allocate to that server. 
+
+
+
+
+
+Best-Fit (BF)
+Description: This algorithm scans the servers from the begniing of the server list to the end and schedules based on the best fit which is found in terms of the core count. 
+
+Pros: 
+- improves memory utilization
+- saves memory from getting wasted being the best method. 
+- memroy efficient (the operating system allocates the job minimum possible space int he memroy, making management very efficient)
+
+Cons: 
+- time complexity is O(N^2) which means that there will be an increased time as you are scanning all the servers and then finding which one has the required amount of cores.
+- Slow process 
+- Increased computational overhead
+- Can result in slower allocation times
+- Potentially leads to increased internal fragmentation. 
+
+
+
+
+
+Worst-Fit Algorithm
+Description: This traveresed the entire memory and selects the server with the largest core count. 
+
+Pros: 
+- Since the process chooses the largest hole/partition there will be a large internal fragmentation. This means that the size of the process is larger than the memory required. 
+
+Cons: 
+- Slow process that doesnt have an efficient time complexity.
+
+
+
